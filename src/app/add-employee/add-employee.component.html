@@ -3,18 +3,28 @@
         <p class="new-emp">New employee</p>
         <mat-icon mat-dialog-close>close</mat-icon>
     </div>
+    <form [formGroup]="addEmpForm" (ngSubmit)="addEmployee()">
     <div class="model-content">
         <label for="name">Name</label>
-        <input type="text">
-        <label for="name">Technologies</label>
-        <input type="text">
-        <label for="startdate">Start date</label>
-        <input type="text">
-        <label for="employee">Empoyees</label>
-        <input type="text">
+        <input type="text" id="name" formControlName="name">
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" formControlName="designation">
+        <label for="joiningdate">Joining date</label>
+        <input type="text" id="joiningdate" formControlName="joiningdate">
+        <label for="technologies">Technologies</label>
+        <input type="text" id="technologies" formControlName="technologies">
     </div>
-    <div mat-dialog-actions class="yes-no-button">
-        <button mat-button mat-dialog-close class="no-button">No</button>
-        <button mat-button mat-dialog-close cdkFocusInitial class="yes-button">Yes</button>
+    <div mat-dialog-actions class="save-cancel-button ">
+        <button mat-raised-button mat-dialog-close class="cancel-button" style="background-color: #D2D3DD ;
+            font-family: Inter Bold;
+            width: 70px ;
+            height: 35px;
+            text-align: center;">Cancel</button>
+        <button mat-raised-button mat-dialog-close cdkFocusInitial class="save-button" style="background-color: #9BA3ED ;
+        font-family: Inter Bold;
+        width: 70px ;
+        height: 35px;
+        text-align: center;" type="submit">Save</button>
     </div>
+</form>
 </div>

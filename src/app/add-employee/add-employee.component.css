@@ -1,7 +1,6 @@
 .model-header {
   display: flex;
   width: 450px;
-  border: 1px solid red;
   justify-content: space-between;
   align-items: center;
 }
@@ -17,40 +16,39 @@
 .model-content {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
-.yes-no-button {
+.save-cancel-button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 250px;
-  margin: auto;
-  margin-top: 50px;
-  align-items: center;
+  margin: 40px 30px;
   text-align: center;
-}
-
-.no-button,
-.yes-button {
-  padding: 8px 47px;
-  /* height: 5.09%;
-    width: 8.83%; */
-  border-radius: 2px;
-  border: none;
-  color: #000000;
-  font-family: Roboto Regular;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 18px;
-  text-align: center;
-  background-color: transparent;
-}
-.yes-button {
-  background-color: #f76b1c;
 }
 
 .dilog {
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+label {
+  font-family: Inter Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 15px;
+  color: #000000;
+  margin-top: 20px;
+}
+input {
+  height: 30px;
+  width: 300px;
+  font-family: Inter Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 15px;
+  color: #000000;
+  margin-top: 20px;
 }
