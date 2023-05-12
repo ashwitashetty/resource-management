@@ -11,13 +11,13 @@
             margin-top: 3%; " (click)="openDialog()">Add</button>
         <input type="text" placeholder="Search" class="search-input">
         <div class="emp-listsection">
-            <div class="emp-list-container" *ngFor="let emp of empList">
-                <p class="emp-list-content">{{emp}}</p>
+            <div class="emp-list-container" *ngFor="let emp of empList" (click)="clicked()">
+                <p class="emp-list-content">{{emp?.name}}</p>
             </div>
         </div>
 
     </div>
-    <div class="emp-details-container">
+    <div class="emp-details-container" *ngIf="empDetail===true">
         <p class="label-text">Name: <span class="content-text">Employee 1</span></p>
         <p class="label-text">Designation: <span class="content-text">Software engineer</span></p>
         <p class="label-text">Joining date: <span class="content-text">12/11/22</span></p>

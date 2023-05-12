@@ -1,6 +1,8 @@
+import { CloseScrollStrategy } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEmployeeComponent } from '../add-employee/add-employee.component';
+import { EmployeeService } from '../service/employee.service';
 
 @Component({
   selector: 'app-employee',
@@ -8,13 +10,30 @@ import { AddEmployeeComponent } from '../add-employee/add-employee.component';
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent implements OnInit {
-  empList: any = ['Employee 1', 'Employee 2', 'Employee 3', 'Employee 4','Employee 1', 'Employee 2', 'Employee 3', 'Employee 4'];
-  constructor(public dialog: MatDialog) {}
-  ngOnInit(): void {}
+  empList: any ;
+  empDetail: boolean = false;
+  constructor(
+    public dialog: MatDialog,
+    public employeeService: EmployeeService
+  ) {}
+  ngOnInit(): void {
+    this.allEmployeeList();
+  }
   openDialog(): void {
     const dialogRef = this.dialog.open(AddEmployeeComponent, {
       width: '500px',
       height: '600px',
+    });
+  }
+  clicked() {
+    console.log('event tri');
+    // this.empDetail=!this.empDetail;
+    this.empDetail = true;
+  }
+  allEmployeeList() {
+    this.employeeService.getAllEmployeeDetails().subscribe((response) => {
+      console.log('response', response);
+      this.empList = response;
     });
   }
 }

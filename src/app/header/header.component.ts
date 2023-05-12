@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../service/login-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(public router: Router) {}
-  ngOnInit(): void {}
+  loginFlag: any = false;
+  constructor(public router: Router, public login: LoginService) {}
+
+  ngOnInit(): void {
+    this.login.getIsLoggedIn().subscribe((data) => {
+      this.loginFlag = data;
+      console.log('clicked', this.loginFlag);
+    });
+  }
   handleLogin() {
     this.router.navigate(['login']);
-    console.log("clicked")
+    // console.log('clicked',this.login.isLoggedIn);
   }
 }

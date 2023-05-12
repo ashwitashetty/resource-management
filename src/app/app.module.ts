@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent, NavbarComponent, EmployeeComponent, ProjectComponent, AddEmployeeComponent, AddProjectComponent],
@@ -28,7 +29,8 @@ import { AddProjectComponent } from './add-project/add-project.component';
     ReactiveFormsModule,
     MaterialModule,
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

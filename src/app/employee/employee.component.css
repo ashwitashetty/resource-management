@@ -41,6 +41,7 @@
 }
 .emp-listsection{
   height: 260px;
+  border: 1px solid red;
   overflow-y: auto;
 }
 .emp-list-container {
@@ -51,6 +52,9 @@
   border: 1px solid #5e66ad;
  
 }
+/* .emp-list-container:focus{
+  background-color: #5E66AD;
+} */
 .emp-listsection::-webkit-scrollbar {
   display: none;
 }
@@ -60,6 +64,8 @@
   font-weight: 800;
   font-size: 18px;
   line-height: 15px;
+  height: 20px;
+
 }
 .emp-details-container {
   width: 50%;
