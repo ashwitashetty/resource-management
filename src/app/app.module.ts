@@ -16,9 +16,10 @@ import { MaterialModule } from './material/material.module';
 import { CommonModule } from '@angular/common';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { MatIconModule } from '@angular/material/icon';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent, NavbarComponent, EmployeeComponent, ProjectComponent, AddEmployeeComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent, NavbarComponent, EmployeeComponent, ProjectComponent, AddEmployeeComponent, AddProjectComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

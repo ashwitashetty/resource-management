@@ -23,12 +23,13 @@
   margin-top: 7%;
 }
 .search-input {
-  width: 30%;
+  width: 35%;
   height: 40px;
   background: #ffffff;
   outline: none;
   border: 1px solid #474242;
   margin-top: 3%;
+  margin-bottom: 50px;
 }
 ::placeholder {
   color: #cdbebe;
@@ -36,6 +37,28 @@
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
+  line-height: 15px;
+}
+.emp-listsection{
+  height: 260px;
+  overflow-y: auto;
+}
+.emp-list-container {
+  height: 50px;
+  width:310px;
+  display: flex;
+  padding-left: 10px;
+  border: 1px solid #5e66ad;
+ 
+}
+.emp-listsection::-webkit-scrollbar {
+  display: none;
+}
+.emp-list-content {
+  font-family: Inter Medium;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
   line-height: 15px;
 }
 .emp-details-container {

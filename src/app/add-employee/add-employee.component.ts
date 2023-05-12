@@ -10,15 +10,15 @@ export class AddEmployeeComponent implements OnInit {
   addEmpForm!: FormGroup;
 
   ngOnInit(): void {
-    this.addEmpForm=new FormGroup({
-      name:new FormControl('',Validators.required),
-      designation:new FormControl(''),
-      joiningdate:new FormControl(''),
-      technologies:new FormControl('')
-    })
+    this.addEmpForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      designation: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required),
+      technologies: new FormControl('', Validators.required),
+    });
   }
-  addEmployee(){
-    console.log("employee save clicked");
-    console.log(this.addEmpForm)
+  addEmployee() {
+    console.log('employee save clicked');
+    console.log(this.addEmpForm);
   }
 }

@@ -10,21 +10,21 @@
         <label for="designation">Designation</label>
         <input type="text" id="designation" formControlName="designation">
         <label for="joiningdate">Joining date</label>
-        <input type="text" id="joiningdate" formControlName="joiningdate">
+        <input type="date" id="date" formControlName="date">
         <label for="technologies">Technologies</label>
         <input type="text" id="technologies" formControlName="technologies">
     </div>
     <div mat-dialog-actions class="save-cancel-button ">
         <button mat-raised-button mat-dialog-close class="cancel-button" style="background-color: #D2D3DD ;
             font-family: Inter Bold;
-            width: 70px ;
+            width: 80px ;
             height: 35px;
             text-align: center;">Cancel</button>
         <button mat-raised-button mat-dialog-close cdkFocusInitial class="save-button" style="background-color: #9BA3ED ;
         font-family: Inter Bold;
-        width: 70px ;
+        width: 80px ;
         height: 35px;
-        text-align: center;" type="submit">Save</button>
+        text-align: center;" type="submit" [disabled]="addEmpForm.invalid">Save</button>
     </div>
 </form>
 </div>

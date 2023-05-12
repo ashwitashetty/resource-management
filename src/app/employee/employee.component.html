@@ -2,9 +2,20 @@
 <div class="employee-container">
     <div class="add-emp-container">
         <p class="all-emp-text">All employees</p>
-        <button mat-raised-button
-            style="background-color: #9BA3ED ; font-family: Inter Bold; text-align: center;  width: 90px ; height: 35px ;font-weight: 600;  font-size: 17px;margin-top: 3%; " (click)="openDialog()">Add</button>
+        <button mat-raised-button style="background-color: #9BA3ED ;
+             font-family: Inter Bold;
+             text-align: center;  width: 90px ;
+             height: 35px ;
+            font-weight: 600;
+            font-size: 17px;
+            margin-top: 3%; " (click)="openDialog()">Add</button>
         <input type="text" placeholder="Search" class="search-input">
+        <div class="emp-listsection">
+            <div class="emp-list-container" *ngFor="let emp of empList">
+                <p class="emp-list-content">{{emp}}</p>
+            </div>
+        </div>
+
     </div>
     <div class="emp-details-container">
         <p class="label-text">Name: <span class="content-text">Employee 1</span></p>
