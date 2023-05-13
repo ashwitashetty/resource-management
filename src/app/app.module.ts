@@ -18,9 +18,10 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent, NavbarComponent, EmployeeComponent, ProjectComponent, AddEmployeeComponent, AddProjectComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, HomeComponent, NavbarComponent, EmployeeComponent, ProjectComponent, AddEmployeeComponent, AddProjectComponent, FilterPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

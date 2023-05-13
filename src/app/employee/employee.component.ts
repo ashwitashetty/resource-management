@@ -10,14 +10,17 @@ import { EmployeeService } from '../service/employee.service';
   styleUrls: ['./employee.component.css'],
 })
 export class EmployeeComponent implements OnInit {
-  empList: any ;
+  // empList: any ;
+  filteredString: string = '';
+  empList: any = ['ashu', 'shetty', 'tanvi', 'gowri', 'noor', 'pooja'];
   empDetail: boolean = false;
   constructor(
     public dialog: MatDialog,
     public employeeService: EmployeeService
   ) {}
   ngOnInit(): void {
-    this.allEmployeeList();
+    // this.allEmployeeList();
+    console.log('iam emp list', this.empList);
   }
   openDialog(): void {
     const dialogRef = this.dialog.open(AddEmployeeComponent, {
@@ -30,10 +33,11 @@ export class EmployeeComponent implements OnInit {
     // this.empDetail=!this.empDetail;
     this.empDetail = true;
   }
-  allEmployeeList() {
-    this.employeeService.getAllEmployeeDetails().subscribe((response) => {
-      console.log('response', response);
-      this.empList = response;
-    });
-  }
+
+  // allEmployeeList() {
+  //   this.employeeService.getAllEmployeeDetails().subscribe((response) => {
+  //     console.log('response', response);
+  //     this.empList = response;
+  //   });
+  // }
 }

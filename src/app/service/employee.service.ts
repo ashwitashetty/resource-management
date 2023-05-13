@@ -16,8 +16,10 @@ export class EmployeeService {
       }
     );
   }
-  addEmployeeData(data:any){
-return this.http.post('https://project-management-tool-dff6f-default-rtdb.asia-southeast1.firebasedatabase.app/employees.json',data)
+  addEmployeeData(data: any) {
+    return this.http.post(
+      'https://project-management-tool-dff6f-default-rtdb.asia-southeast1.firebasedatabase.app/employees.json',
+      data
+    );
   }
-
 }

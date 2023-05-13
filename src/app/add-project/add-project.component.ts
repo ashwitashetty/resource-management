@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProjectService } from '../service/project.service';
 
 @Component({
   selector: 'app-add-project',
@@ -8,7 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddProjectComponent implements OnInit {
   addProjectForm!: FormGroup;
+ constructor(private projectService:ProjectService){
 
+ }
   ngOnInit(): void {
     this.addProjectForm = new FormGroup({
       name: new FormControl('', Validators.required),
@@ -19,6 +22,9 @@ export class AddProjectComponent implements OnInit {
   }
   addProject() {
     console.log('project save clicked');
-    console.log(this.addProjectForm.value);
+    console.log("add project data",this.addProjectForm.value);
+    this.projectService.addProjectData(this.addProjectForm.value).subscribe((response)=>{
+      console.log('i am response for project added',response)
+    })
   }
 }

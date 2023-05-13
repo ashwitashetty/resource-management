@@ -7,7 +7,7 @@
 }
 .add-emp-container {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
   padding-left: 30px;
@@ -30,6 +30,11 @@
   border: 1px solid #474242;
   margin-top: 3%;
   margin-bottom: 50px;
+  font-family: Inter Regular;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 15px;
 }
 ::placeholder {
   color: #cdbebe;
@@ -41,12 +46,11 @@
 }
 .emp-listsection{
   height: 260px;
-  border: 1px solid red;
+  width: 360px;
   overflow-y: auto;
 }
 .emp-list-container {
-  height: 50px;
-  width:310px;
+  height: 50px; 
   display: flex;
   padding-left: 10px;
   border: 1px solid #5e66ad;
@@ -64,7 +68,8 @@
   font-weight: 800;
   font-size: 18px;
   line-height: 15px;
-  height: 20px;
+
+
 
 }
 .emp-details-container {

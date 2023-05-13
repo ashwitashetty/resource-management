@@ -9,10 +9,10 @@
             font-weight: 600;
             font-size: 17px;
             margin-top: 3%; " (click)="openDialog()">Add</button>
-        <input type="text" placeholder="Search" class="search-input">
+        <input type="text" placeholder="Search" class="search-input" [(ngModel)]="filteredString">
         <div class="emp-listsection">
-            <div class="emp-list-container" *ngFor="let emp of empList" (click)="clicked()">
-                <p class="emp-list-content">{{emp?.name}}</p>
+            <div class="emp-list-container" *ngFor="let emp of empList |filter:filteredString" (click)="clicked()">
+                <p class="emp-list-content">{{emp}}</p>
             </div>
         </div>
 
